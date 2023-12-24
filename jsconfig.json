@@ -1,0 +1,12 @@
+// 解决带alias快捷跳转失败
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      // ?此处添加别名路径
+      "@/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*"]
+}

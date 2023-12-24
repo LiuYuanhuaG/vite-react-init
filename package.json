@@ -1,0 +1,72 @@
+{
+  "name": "{{ name }}",
+  "private": true,
+  "version": "1.0.0",
+  "description": "{{ description }}",
+  "type": "module",
+  "engines": {
+    "node": ">=16.14.2"
+  },
+  "scripts": {
+    "start": "node scripts/start.js",
+    "build": "node scripts/build.js",
+    "preview": "vite preview",
+    "lint-staged": "lint-staged --allow-empty --quiet",
+    "lint-staged:js": "eslint --fix --ext .js,.jsx,.ts,.tsx,.vue ",
+    "preinstall": "npx only-allow npm",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@ant-design/cssinjs": "^1.17.2",
+    "@ant-design/icons": "^5.2.6",
+    "ahooks": "^3.7.8",
+    "antd": "^5.11.1",
+    "autoprefixer": "^10.4.16",
+    "axios": "^1.6.2",
+    "clsx": "^2.0.0",
+    "dayjs": "^1.11.10",
+    "jss-plugin-vendor-prefixer": "^10.10.0",
+    "less": "^4.2.0",
+    "lodash-es": "^4.17.21",
+    "nprogress": "^0.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-jss": "^10.10.0",
+    "react-router-dom": "^6.17.0",
+    "react-transition-group": "^4.4.5",
+    "recoil": "^0.7.7",
+    "recoil-nexus": "^0.5.0"
+  },
+  "devDependencies": {
+    "@plugin-web-update-notification/vite": "^1.7.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "@types/react": "^18.2.31",
+    "@types/react-dom": "^18.2.14",
+    "@unocss/eslint-config": "^0.57.3",
+    "@unocss/transformer-attributify-jsx": "^0.57.4",
+    "@vitejs/plugin-legacy": "^4.1.1",
+    "@vitejs/plugin-react-swc": "^3.4.0",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.1",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-rational-order": "^1.0.3",
+    "react-dev-inspector": "^2.0.0",
+    "rollup-plugin-visualizer": "^5.9.2",
+    "unocss": "^0.57.2",
+    "vite": "^4.5.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-no-bug": "^1.0.5"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,vue}": "npm run lint-staged:js",
+    "**/*.{js,jsx,tsx,ts,less,md,json,vue}": [
+      "prettier --write"
+    ]
+  }
+}
